@@ -37,7 +37,7 @@ def filter_pulse(pulse_data):
 
 if __name__ == '__main__':
     fig, ax = plt.subplots(3, 3)
-    data= read_csv_data("C:\\Users\\jurcz\\Desktop\\CalRead\\790mV.csv")
+    data= read_csv_data("CalRead\\790mV.csv")
     pd, diff, ival= filter_pulse(data)
     pd = np.asarray(pd)
     plt.figure(1)
@@ -48,7 +48,7 @@ if __name__ == '__main__':
     ax[0, 0].plot(list(range(0, 30)), pd.T)
     ax[1, 0].plot(list(range(len(diff))), diff)
     ax[2, 0].plot(list(range(len(ival))), ival)
-    data= read_csv_data("C:\\Users\\jurcz\\Desktop\\CalRead\\800mV.csv")
+    data= read_csv_data("CalRead\\800mV.csv")
     pd, diff, ival= filter_pulse(data)
     pd = np.asarray(pd)
     # plt.figure(2)
@@ -59,7 +59,7 @@ if __name__ == '__main__':
     ax[0, 1].plot(list(range(0, 30)), pd.T)
     ax[1, 1].plot(list(range(len(diff))), diff)
     ax[2, 1].plot(list(range(len(ival))), ival)
-    data= read_csv_data("C:\\Users\\jurcz\\Desktop\\CalRead\\810mV.csv")
+    data= read_csv_data("CalRead\\810mV.csv")
     pd, diff, ival = filter_pulse(data)
     pd = np.asarray(pd)
     # plt.figure(2)

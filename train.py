@@ -17,11 +17,11 @@ device = (
 )
 print(f"Using {device} device")
 
-learning_rate = 1e-5
+learning_rate = 1e-4
 batch_size = 512
 no_of_layers = 10
-epochs = 50
-no_of_features = 500
+epochs = 20
+no_of_features = 40
 layers = [nn.Linear(no_of_features, no_of_features), nn.ReLU()]
 
 class NeuralNetwork(nn.Module):
@@ -97,14 +97,14 @@ lengths = [1000]
 for length in lengths:
     print(f"Length: {length}")
     training_data = PulseDataset(
-        pulse_dir="C:\\Users\\jurcz\\Desktop\\CalRead",
+        pulse_dir="CalRead",
         transform=pulse_transform,
         target_transform=cal_vol_transform,
         max_len=length
     )
 
     test_data = PulseDataset(
-        pulse_dir="C:\\Users\\jurcz\\Desktop\\CalTest",
+        pulse_dir="CalTest",
         transform=pulse_transform,
         target_transform=cal_vol_transform,
         max_len=length
